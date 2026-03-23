@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { translations } from 'A/lib/translations';
+import { translations } from '@/lib/translations';
 import { useLanguage } from '@/lib/language';
 
 export default function ChatWidget() {

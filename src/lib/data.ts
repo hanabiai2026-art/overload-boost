@@ -1,0 +1,268 @@
+export interface Service {
+  id: string
+  name: string
+  nameJa: string
+  description: string
+  descriptionJa: string
+  priceUSD: number
+  delivery: string
+  deliveryJa: string
+}
+
+export interface Game {
+  id: string
+  name: string
+  nameJa: string
+  slug: string
+  image: string
+  description: string
+  descriptionJa: string
+  services: Service[]
+}
+
+export const games: Game[] = [
+  {
+    id: 'wow',
+    name: 'World of Warcraft',
+    nameJa: 'ワールド オブ ウォークラフト',
+    slug: 'world-of-warcraft',
+    image: 'https://cdn.akamai.steamstatic.com/steam/apps/2835570/library_600x900.jpg',
+    description: 'Dominate Azeroth with professional WoW boosting services.',
+    descriptionJa: 'プロのWoWブースティングサービスでアゼロスを制覇しよう。',
+    services: [
+      {
+        id: 'wow-mythic-plus-15',
+        name: 'Mythic+ Dungeon +15 Carry',
+        nameJa: 'ミシック+ ダンジョン +15 キャリー',
+        description: 'Our pro team clears your +15 Mythic key with a full group. Full loot funneled to you, no wipe guarantee.',
+        descriptionJa: 'プロチームがあなたの+15ミシックキーをフルグループでクリア。すべてのルート権があなたに。',
+        priceUSD: 34.99,
+        delivery: '2-4 hours',
+        deliveryJa: '2～4時間',
+      },
+      {
+        id: 'wow-mythic-raid-clear',
+        name: 'Mythic Raid Clear (Full Tier)',
+        nameJa: 'ミシック レイド クリア（フルティア）',
+        description: 'Professional clear of current Mythic tier raid. Gear rewards distributed, carry rotation included.',
+        descriptionJa: '現在のミシックティアレイドのプロフェッショナルクリア。ギア報酬配分、キャリーローテーション含む。',
+        priceUSD: 89.99,
+        delivery: '3-7 days',
+        deliveryJa: '3～7日間',
+      },
+      {
+        id: 'wow-power-leveling',
+        name: 'Power Leveling (1-70)',
+        nameJa: 'パワーレベリング（1～70）',
+        description: 'Instant level 70 boost. Account shares or piloted runs. Fastest route with zone optimizations.',
+        descriptionJa: 'インスタントレベル70ブースト。アカウント共有またはパイロット実行。最速ルートでゾーン最適化。',
+        priceUSD: 24.99,
+        delivery: '6-12 hours',
+        deliveryJa: '6～12時間',
+      },
+      {
+        id: 'wow-pvp-rating-boost',
+        name: 'Arena Rating Boost (2v2/3v3)',
+        nameJa: 'アリーナルーティング ブースト（2v2/3v3）',
+        description: 'Push your rating to 2400+. Piloted runs with elite PvP players. Seasonal rewards guaranteed.',
+        descriptionJa: '2400以上までレーティング上昇。エリートPvPプレイヤーとのパイロット実行。シーズン報酬確定。',
+        priceUSD: 119.99,
+        delivery: '5-8 days',
+        deliveryJa: '5～8日間',
+      },
+      {
+        id: 'wow-gear-farming',
+        name: 'Heroic Gear Package (Full Set)',
+        nameJa: 'ヒロイック ギア パッケージ（フルセット）',
+        description: 'Complete Heroic raid gear set in one week. Multiple runs across all bosses with priority loot.',
+        descriptionJa: '1週間でヒロイックレイドギアセット完成。すべてのボスで複数実行、優先度ロット付き。',
+        priceUSD: 49.99,
+        delivery: '7 days',
+        deliveryJa: '7日間',
+      },
+    ],
+  },
+  {
+    id: 'ffxiv',
+    name: 'Final Fantasy XIV',
+    nameJa: 'ファイナルファンタジーXIV',
+    slug: 'final-fantasy-xiv',
+    image: 'https://cdn.akamai.steamstatic.com/steam/apps/39210/library_600x900.jpg',
+    description: 'Level up your Warrior of Light with expert FFXIV services.',
+    descriptionJa: '光の戦士をプロのFFXIVサービスでレベルアップ。',
+    services: [
+      {
+        id: 'ffxiv-savage-raid-clear',
+        name: 'Savage Raid Clear (Week 1)',
+        nameJa: 'サベージレイド クリア（1週目）',
+        description: 'Week 1 Savage clear with experienced team. Loot priority, mechanics coaching included.',
+        descriptionJa: '1週目サベージレイドをベテランチームでクリア。ロット優先、メカニクス指導付き。',
+        priceUSD: 79.99,
+        delivery: '3-5 days',
+        deliveryJa: '3～5日間',
+      },
+      {
+        id: 'ffxiv-power-leveling',
+        name: 'Power Leveling to Max (1-100)',
+        nameJa: 'パワーレベリング マックス（1～100）',
+        description: 'Fast 1-100 leveling with optimal dungeon routing and daily roulette spam. Piloted runs available.',
+        descriptionJa: '最適ダンジョンルートと日次ルーレットスパムで高速レベリング。パイロット実行オプション付き。',
+        priceUSD: 44.99,
+        delivery: '4-6 hours',
+        deliveryJa: '4～6時間',
+      },
+      {
+        id: 'ffxiv-extreme-trial-farm',
+        name: 'Extreme Trial Farming (10 Clears)',
+        nameJa: 'エクストリーム トライアル ファーム（10回）',
+        description: 'Farm Extreme trials for weapons and drops. 10 guaranteed clears with weekly reset waits.',
+        descriptionJa: 'エクストリームトライアルを武器とドロップ用にファーム。週間リセット待機で10回クリア確定。',
+        priceUSD: 64.99,
+        delivery: '2 weeks',
+        deliveryJa: '2週間',
+      },
+      {
+        id: 'ffxiv-relic-weapon-grind',
+        name: 'Relic Weapon Grind Service',
+        nameJa: 'レリック武器 グラインド サービス',
+        description: 'Complete relic weapon journey from start to finish. Quest-heavy content handled. Account share or piloted.',
+        descriptionJa: 'レリック武器の最初かり疌成まで。クエスト重視コンテンツ処理。アカウント共有またはパイロット。',
+        priceUSD: 99.99,
+        delivery: '10-14 days',
+        deliveryJa: '10～14日間',
+      },
+      {
+        id: 'ffxiv-gil-farming',
+        name: 'Gil Farming Package (10M Gil)',
+        nameJa: 'ギル ファーミング パッケージ（1000万ギル）',
+        description: 'Earn 10 million Gil through optimized farming routes and treasure map farming.',
+        descriptionJa: '最適化ファームルートとトレジャーマップで1000万ギル獲得。',
+        priceUSD: 39.99,
+        delivery: '5-7 days',
+        deliveryJa: '5～7日間',
+      },
+    ],
+  },
+  {
+    id: 'diablo-iv',
+    name: 'Diablo IV',
+    nameJa: 'ディアブロ IV',
+    slug: 'diablo-iv',
+    image: 'https://cdn.akamai.steamstatic.com/steam/apps/2344520/library_600x900.jpg',
+    description: 'Crush the forces of Hell with our Diablo IV boosting.',
+    descriptionJa: 'ディアブロIVブースティングで地獄の軍勢を粉砕。',
+    services: [
+      {
+        id: 'd4-seasonal-power-level',
+        name: 'Seasonal Power Leveling (1-100)',
+        nameJa: 'シーズナル パワーレベリング（1～100）',
+        description: 'Season start speed leveling. Nightmare dungeon optimization and boss runs included.',
+        descriptionJa: 'シーズン開始スピードレベリング。ナイトメアダンジョン最適化とボスラン含む。',
+        priceUSD: 19.99,
+        delivery: '3-4 hours',
+        deliveryJa: '3～4時間',
+      },
+      {
+        id: 'd4-pit-push-carry',
+        name: 'Pit Tier 100+ Push Carry',
+        nameJa: 'ピット ティア 100以上 プッシュ キャリー',
+        description: 'Professional carry through Tier 100+ Pit runs. Elite gear required. Speed runs guaranteed.',
+        descriptionJa: 'ティア100以上ピットラン専門キャリー。エリートギア必須。スピードラン確定。',
+        priceUSD: 59.99,
+        delivery: '1-2 days',
+        deliveryJa: '1～2日間',
+      },
+      {
+        id: 'd4-torment-carry',
+        name: 'Torment Difficulty Carry (Act Completion)',
+        nameJa: 'トルメント ディフィカルティ キャリー（アクト完了）',
+        description: 'Piloted campaign run on Torment. All bosses defeated, dungeons cleared, gear optimized.',
+        descriptionJa: 'トルメントパイロット実行。全ボス撃破、ダンジョンクリア、ギア最適化。',
+        priceUSD: 29.99,
+        delivery: '8-12 hours',
+        deliveryJa: '8～12時間',
+      },
+      {
+        id: 'd4-unique-farming',
+        name: 'Unique Item Farming (Targeted Hunt)',
+        nameJa: 'ユニーク アイテム ファーミング（特定狙い）',
+        description: 'Hunt specific Unique items for your class. Boss route optimization and drop guarantee on acquisition.',
+        descriptionJa: 'クラス用特定ユニークアイテム狩り。ボスルート最適化と獲得時ドロップ確定。',
+        priceUSD: 69.99,
+        delivery: '5-7 days',
+        deliveryJa: '5～7日間',
+      },
+      {
+        id: 'd4-build-coaching',
+        name: 'Build Optimization Coaching (1 Hour)',
+        nameJa: 'ビルド 最適化 コーチング（1時間）',
+        description: 'Live coaching session with pro player. Build theory, itemization strategy, and playstyle optimization.',
+        descriptionJa: 'プロプレイヤーとライブコーチング。ビルド理論、アイテム戦略、プレイスタイル最適化。',
+        priceUSD: 39.99,
+        delivery: '1-2 hours',
+        deliveryJa: '1～2時間',
+      },
+    ],
+  },
+  {
+    id: 'poe',
+    name: 'Path of Exile',
+    nameJa: 'パス オブ エグザイル',
+    slug: 'path-of-exile',
+    image: 'https://cdn.akamai.steamstatic.com/steam/apps/238960/library_600x900.jpg',
+    description: 'Master Wraeclast with our Path of Exile boosting services.',
+    descriptionJa: 'パス オブ エグザイルのブースティングでレイクラストを征服。',
+    services: [
+      {
+        id: 'poe-league-power-level',
+        name: 'League Start Power Leveling (1-70)',
+        nameJa: 'リーグスタート パワーレベリング（1～70）',
+        description: 'Fast league start leveling with optimal quest skipping and zone rushing. Piloted or account share.',
+        descriptionJa: 'リーグスタート高速レベリング。最適なクエストスキップとゾーンラッシュ。パイロットまたはアカウント共有。',
+        priceUSD: 14.99,
+        delivery: '2-3 hours',
+        deliveryJa: '2～3時間',
+      },
+      {
+        id: 'poe-uber-boss-kill',
+        name: 'Uber Boss Completion (Maven/Uber Elder)',
+        nameJa: 'ウーバー ボス クリア（メイヴン/アルティメットエルダー）',
+        description: 'Professional carry through Uber bosses. Maven witnessed fights, Uber Elder deathless runs guaranteed.',
+        descriptionJa: 'ウーバーボスプロキャリー。メイヴン目撃ファイト、アルティメットエルダーノーデス実行確定。',
+        priceUSD: 49.99,
+        delivery: '2-4 days',
+        deliveryJa: '2～4日間',
+      },
+      {
+        id: 'poe-atlas-completion',
+        name: 'Atlas Completion (100% Map Fill)',
+        nameJa: 'アトラス 完了（100%マップ埋め）',
+        description: 'Complete atlas maps from zero to 100%. Mechanics guidance and sextant optimization included.',
+        descriptionJa: 'アトラスマップを0から100%まで完成。メカニクスガイダンスとセキスタント最適化含む。',
+        priceUSD: 44.99,
+        delivery: '7-10 days',
+        deliveryJa: '7～10日間',
+      },
+      {
+        id: 'poe-currency-farming',
+        name: 'Currency Farming (500 Chaos Equiv)',
+        nameJa: 'カレンシー ファーミング（500カオス相当）',
+        description: 'Farm 500 Chaos orb equivalent value. Scarab strategy, delve optimization, and betrayal farming.',
+        descriptionJa: '500カオスオーブ相当価値をファーム。スカラブ戦略、デルヴ最適化、背信ファーム。',
+        priceUSD: 34.99,
+        delivery: '6-8 days',
+        deliveryJa: '6～8日間',
+      },
+      {
+        id: 'poe-build-setup',
+        name: 'Build Setup & Gear Acquisition',
+        nameJa: 'ビルド セットアップ＆ギア獲得',
+        description: 'Complete build implementation from scratch. Gear sourcing, skill gem setup, and passive tree optimization.',
+        descriptionJa: '最初からビルド完全実装。ギアソーシング、スキルジェムセットアップ、パッシブツリー最適化。',
+        priceUSD: 54.99,
+        delivery: '4-6 days',
+        deliveryJa: '4～6日間',
+      },
+    ],
+  },
+]

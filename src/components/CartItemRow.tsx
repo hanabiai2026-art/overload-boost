@@ -2,8 +2,8 @@
 
 import { CartItem } from '@/lib/cart';
 import { useLanguage } from '@/lib/language';
-import { useCurrency, formatPrice } from 'A/lib/currency';
-import { useCart } from 'A/lib/cart';
+import { useCurrency, formatPrice } from '@/lib/currency';
+import { useCart } from '@/lib/cart';
 import { translations } from '@/lib/translations';
 import Image from 'next/image';
 
